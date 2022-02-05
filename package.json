@@ -1,0 +1,19 @@
+{
+  "name": "login_registration_form",
+  "version": "1.0.0",
+  "description": "Login / Registration Form Design Using Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "vite": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Priyam Bhattacharya",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.18",
+    "vite": "^2.7.13"
+  }
+}

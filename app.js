@@ -74,8 +74,34 @@ password.addEventListener('blur', function (e) {
         console.log("Password Should Be Greater than 8");
         p_err_mes.classList.toggle('hidden')
     }
-    else
-    {
+    else {
         console.log("Ok Password")
+    }
+})
+
+
+const c_p_err_mes = document.getElementById('c-password-error')
+let ccp = 0;
+
+c_password.addEventListener('focus', function (e) {
+    let cp_len = c_password.value.length;
+    console.log("cp_len is" + cp_len)
+    if (cp_len > 0) {
+        c_p_err_mes.classList.toggle('hidden')
+    }
+})
+
+c_password.addEventListener('blur', function (e) {
+    let p_len = password.value;
+    let cp_len = c_password.value;
+    if (cp_len.length > 0) {
+        let res = p_len.localeCompare(cp_len)
+        if (res == 0) {
+            console.log("Password Matches")
+        }
+        else {
+            c_p_err_mes.classList.toggle('hidden')
+            console.log("Password Doesnot Matches")
+        }
     }
 })

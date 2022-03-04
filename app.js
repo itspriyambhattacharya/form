@@ -47,3 +47,35 @@ login_span.addEventListener('click', function (e) {
     f_name.classList.add('hidden')
     c_f_password.classList.add('hidden')
 })
+
+
+//Form Validation
+
+const password = document.getElementById('pass-inp')
+const c_password = document.getElementById('f-c-password')
+console.log(password)
+console.log(c_f_password)
+
+
+const p_err_mes = document.getElementById('password-error')
+let cp = 0;
+
+password.addEventListener('focus', function (e) {
+    cp++;
+    if (cp > 1) {
+        p_err_mes.classList.toggle('hidden')
+    }
+})
+
+password.addEventListener('blur', function (e) {
+    const p_data = password.value;
+    let p_len = p_data.length;
+    if (p_len < 8) {
+        console.log("Password Should Be Greater than 8");
+        p_err_mes.classList.toggle('hidden')
+    }
+    else
+    {
+        console.log("Ok Password")
+    }
+})

@@ -4,7 +4,7 @@
   "description": "Login / Registration Form Design Using Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "vite": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
